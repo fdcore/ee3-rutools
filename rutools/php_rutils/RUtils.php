@@ -71,7 +71,7 @@ class RUtils
      */
     public static function formatNumber($number, $decimals=0)
     {
-        $number = number_format($number, $decimals, ',', ' ');
+        $number = number_format((float)$number, $decimals, ',', ' ');
         return str_replace(' ', "\xE2\x80\x89", $number);
     }
 }
